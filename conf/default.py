@@ -36,7 +36,7 @@ SECRET_KEY = APP_TOKEN
 # 是否启用celery任务
 IS_USE_CELERY = True
 # 本地开发的 celery 的消息队列（RabbitMQ）信息
-BROKER_URL_DEV = 'amqp://guest:guest@192.168.30.241:5672/'
+BROKER_URL_DEV = 'amqp://guest:guest@127.0.0.1:5672/'
 
 # ==============================================================================
 # 应用运行环境配置信息

@@ -16,7 +16,7 @@ from settings import APP_ID
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 默认用mysql
-        'NAME': 'test',  # 数据库名 (默认与APP_ID相同)
+        'NAME': 'testdisk',  # 数据库名 (默认与APP_ID相同)
         'USER': 'root',  # 你的数据库user
         'PASSWORD': 'root',  # 你的数据库password
         'HOST': '192.168.1.73',  # 数据库HOST
@@ -25,7 +25,7 @@ DATABASES = {
 }
 
 REDIS = {
-    'host': '192.168.30.241',
+    'host': '127.0.0.1',
     'port': 6379,
 }
 

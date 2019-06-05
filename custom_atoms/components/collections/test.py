@@ -6,7 +6,7 @@ from pipeline.core.flow.activity import Service
 from pipeline.component_framework.component import Component
 from blueking.component.shortcuts import get_client_by_user
 
-__group_name__ = _(u"个人服务(SELFAPI)")
+__group_name__ = _(u"自定义原子(TEST)")
 
 
 class GetDfuasgeService(Service):
@@ -19,11 +19,13 @@ class GetDfuasgeService(Service):
         host_ip = data.get_one_of_inputs('self_server_ip')
         host_system = data.get_one_of_inputs('self_server_system')
         hsot_disk = data.get_one_of_inputs('self_server_disk')
+        bk_username = data.get_one_of_inputs('self_server_username')
 
         api_kwargs = {
             'ip': host_ip,
             'system': host_system,
-            'disk': hsot_disk
+            'disk': hsot_disk,
+            ' bk_username': bk_username
         }
         api_result = client.disk_query.get_disk_usage(api_kwargs)
 
@@ -50,4 +52,4 @@ class GetDfuasgeComponent(Component):
     name = _(u'磁盘容量查询')
     code = 'self_server_get_dfusage'
     bound_service = GetDfuasgeService
-    form = settings.STATIC_URL + 'custom_atoms/test/self_server_get_dfusage.js'
+    form = settings.STATIC_URL + 'custom_atoms/test/test_custom.js'
